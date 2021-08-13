@@ -1,0 +1,43 @@
+name: todo_list_provider
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  sqflite: ^2.0.0+3
+  provider: ^5.0.0
+  path: ^1.8.0
+  google_fonts: ^2.1.0
+  flutter_signin_button: ^2.0.0
+  firebase_core: ^1.4.0
+  firebase_auth: ^3.0.1
+  validatorless: ^1.2.0
+  flutter_overlay_loader: ^0.1.1
+  google_sign_in: ^5.0.7
+  date_picker_timeline: ^1.2.3
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+  fonts:
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
