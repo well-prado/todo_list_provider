@@ -38,7 +38,7 @@ class Task extends StatelessWidget {
             ),
           ),
           subtitle: Text(
-            dateFormat.format(model.datetime),
+            dateFormat.format(model.dateTime),
             style: TextStyle(
               decoration: model.finished ? TextDecoration.lineThrough : null,
             ),

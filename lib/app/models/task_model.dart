@@ -1,13 +1,13 @@
 class TaskModel {
   final int id;
   final String description;
-  final DateTime datetime;
+  final DateTime dateTime;
   final bool finished;
 
   TaskModel({
     required this.id,
     required this.description,
-    required this.datetime,
+    required this.dateTime,
     required this.finished,
   });
 
@@ -15,7 +15,7 @@ class TaskModel {
     return TaskModel(
       id: task['id'],
       description: task['descricao'],
-      datetime: DateTime.parse(task['data_hora']),
+      dateTime: DateTime.parse(task['data_hora']),
       finished: task['finalizado'] == 1,
     );
   }
@@ -23,13 +23,13 @@ class TaskModel {
   TaskModel copyWith({
     int? id,
     String? description,
-    DateTime? datetime,
+    DateTime? dateTime,
     bool? finished,
   }) {
     return TaskModel(
       id: id ?? this.id,
       description: description ?? this.description,
-      datetime: datetime ?? this.datetime,
+      dateTime: dateTime ?? this.dateTime,
       finished: finished ?? this.finished,
     );
   }

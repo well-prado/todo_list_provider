@@ -80,6 +80,9 @@ class HomeController extends DefaultChangeNotifier {
       selectedDay = null;
     }
 
+    hideLoading();
+    notifyListeners();
+
     if (!showFinishingTasks) {
       filteredTasks = filteredTasks.where((task) => !task.finished).toList();
     }
@@ -88,10 +91,10 @@ class HomeController extends DefaultChangeNotifier {
     notifyListeners();
   }
 
-  void filterByDay(DateTime date) async {
+  void filterByDay(DateTime date) {
     selectedDay = date;
     filteredTasks = allTasks.where((task) {
-      return task.datetime == date;
+      return task.dateTime == date;
     }).toList();
     notifyListeners();
   }
